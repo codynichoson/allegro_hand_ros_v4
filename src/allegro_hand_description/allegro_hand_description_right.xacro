@@ -84,6 +84,15 @@
     <!-- FINGERS -->
     <!-- RIGHT HAND due to which finger is number 0 -->
     <!-- for LEFT HAND switch the sign of the **offset_origin_y** and **finger_angle_r** parameters-->
+    
+    <!-- THREE FINGER MACRO -->
+    <xacro:macro name="finger"
+                 params="finger_num offset_origin_x offset_origin_y offset_origin_z finger_angle_r">
+
+    <!-- THUMB MACRO -->
+    <xacro:macro name="thumb_right"
+                 params="finger_num offset_origin_x offset_origin_y offset_origin_z finger_angle_r finger_angle_p finger_angle_y">
+    
     <xacro:finger
             finger_num="0"
             offset_origin_x="${offset_origin_x_const}"
@@ -118,9 +127,7 @@
 
     <!-- ============================================================================= -->
 
-    <!-- THUMB MACRO -->
-    <xacro:macro name="thumb_right"
-                 params="finger_num offset_origin_x offset_origin_y offset_origin_z finger_angle_r finger_angle_p finger_angle_y">
+    
 
         <!-- [LINK 12] -->
         <link name="link_${finger_num*4+0}">
@@ -308,9 +315,7 @@
     </xacro:macro>
     <!-- END THUMB MACRO -->
 
-    <!-- THREE FINGER MACRO -->
-    <xacro:macro name="finger"
-                 params="finger_num offset_origin_x offset_origin_y offset_origin_z finger_angle_r">
+    
 
         <!-- [LINK 0, 4, 8] -->
         <link name="link_${finger_num*4+0}">

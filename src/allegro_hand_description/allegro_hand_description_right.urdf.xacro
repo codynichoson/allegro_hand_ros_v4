@@ -13,13 +13,6 @@
   <!-- ========================= LIMITS ========================= -->
   <!-- ============================================================================= -->
   <!-- PALM -->
-  <!-- <link name="dummy_link"/>
-
-  <joint name="dummy_joint" type="fixed">
-    <parent link="dummy_link"/>
-    <child link="palm_link"/>
-  </joint> -->
-
   <link name="palm_link">
     <visual>
       <geometry>
