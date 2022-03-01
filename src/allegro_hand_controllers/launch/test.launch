@@ -43,7 +43,7 @@
     <arg name="NUM" value="$(arg NUM)"/>
   </include>
 
-  <arg name="CONTROLLER" default="rps"/> <!-- grasp, pd, velsat  -->
+  <arg name="CONTROLLER" default="grasp"/> <!-- grasp, pd, velsat  -->
   <!-- Controllers include:
        -grasp *
        -pd

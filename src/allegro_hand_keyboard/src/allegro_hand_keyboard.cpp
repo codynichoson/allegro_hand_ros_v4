@@ -170,6 +170,51 @@ void AHKeyboard::keyLoop()
         ss << "save";
         dirty = true;
         break;
+      case KEYCODE_1:
+        ROS_DEBUG("1_key: One.");
+        ss << "one";
+        dirty = true;
+        break;
+      case KEYCODE_2:
+        ROS_DEBUG("2_key: Two.");
+        ss << "two";
+        dirty = true;
+        break;
+      case KEYCODE_3:
+        ROS_DEBUG("3_key: Scissors.");
+        ss << "three";
+        dirty = true;
+        break;
+      case KEYCODE_4:
+        ROS_DEBUG("4_key: Rock.");
+        ss << "rock";
+        dirty = true;
+        break;
+      case KEYCODE_5:
+        ROS_DEBUG("5_key: Paper.");
+        ss << "paper";
+        dirty = true;
+        break;
+      case KEYCODE_6:
+        ROS_DEBUG("6_key: Scissors.");
+        ss << "scissors";
+        dirty = true;
+        break;
+      case KEYCODE_7:
+        ROS_DEBUG("7_key: Bird.");
+        ss << "bird";
+        dirty = true;
+        break;
+      case KEYCODE_8:
+        ROS_DEBUG("8_key: Aloha.");
+        ss << "aloha";
+        dirty = true;
+        break;
+      case KEYCODE_9:
+        ROS_DEBUG("9_key: Horns.");
+        ss << "horns";
+        dirty = true;
+        break;
       case KEYCODE_slash:
       case KEYCORD_question:
         printUsage();

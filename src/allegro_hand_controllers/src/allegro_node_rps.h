@@ -1,5 +1,5 @@
-#ifndef PROJECT_NUALLEGRO_NODE_H
-#define PROJECT_NUALLEGRO_NODE_H
+#ifndef PROJECT_NUALLEGRO_NODE_GRASP_H
+#define PROJECT_NUALLEGRO_NODE_GRASP_H
 
 #include "allegro_node.h"
 
@@ -7,15 +7,28 @@
 #include "std_msgs/String.h"
 #include "std_msgs/Float32.h"
 
+// Forward class declaration.
 class BHand;
 
-class NUAllegroNode : public AllegroNode {
+// Grasping controller that uses the BHand library for commanding various
+// pre-defined grasp (e.g., three-finger ping, envelop, etc...).
+//
+// This node is most useful when run with the keyboard node (the keyboard node
+// sends the correct String to this node). A map from String command -> Grasp
+// type is defined in the implementation (cpp) file.
+//
+// This node can also save & hold a position, but in constrast to the PD node
+// you do not have any control over the controller gains.
+//
+// Author: Felix Duvallet
+//
+class AllegroNodeGrasp : public AllegroNode {
 
  public:
 
-    NUAllegroNode();
+    AllegroNodeGrasp();
 
-    ~NUAllegroNode();
+    ~AllegroNodeGrasp();
 
     void initController(const std::string &whichHand);
 
@@ -45,3 +58,4 @@ class NUAllegroNode : public AllegroNode {
   double desired_position[DOF_JOINTS] = {0.0};
 };
 
+#endif //PROJECT_ALLEGRO_NODE_GRASP_H
