@@ -127,7 +127,13 @@
 
     <!-- ============================================================================= -->
 
+<<<<<<< HEAD
     
+=======
+    <!-- THUMB MACRO -->
+    <xacro:macro name="thumb_right"
+                 params="finger_num offset_origin_x offset_origin_y offset_origin_z finger_angle_r finger_angle_p finger_angle_y">
+>>>>>>> b19b18ea130c4fbe343f2c178eec6cb55186a4ac
 
         <!-- [LINK 12] -->
         <link name="link_${finger_num*4+0}">
@@ -315,7 +321,13 @@
     </xacro:macro>
     <!-- END THUMB MACRO -->
 
+<<<<<<< HEAD
     
+=======
+    <!-- THREE FINGER MACRO -->
+    <xacro:macro name="finger"
+                 params="finger_num offset_origin_x offset_origin_y offset_origin_z finger_angle_r">
+>>>>>>> b19b18ea130c4fbe343f2c178eec6cb55186a4ac
 
         <!-- [LINK 0, 4, 8] -->
         <link name="link_${finger_num*4+0}">
