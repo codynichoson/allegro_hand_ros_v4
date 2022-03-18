@@ -149,7 +149,7 @@
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch"
            if="$(arg GAZEBO)">
-    <arg name="world_name" value="$(find allegro_hand_description)/worlds/allegro.world"/>
+    <arg name="world_name" value="$(find rockpaperscissors)/worlds/rockpaperscissors.world"/>
     <arg name="debug" value="false" />
     <arg name="paused" value="true"/>
   </include>

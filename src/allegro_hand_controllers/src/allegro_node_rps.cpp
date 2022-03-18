@@ -47,6 +47,11 @@ static double three[] = {
   -0.039941066932278134, -0.2212158101350734, 0.164398819111431, 0.08443808944742874, 
   0.0050197770809003546, 0.019177554183457332, 0.1272522055704284, -0.21176454685530827, 
   0.47751865437409846, 0.8188189627363381, 0.5055942701950735, 1.6656458630887414};
+static double start[] = {
+  -0.12479963620550248, 0.8610256881538054, 1.4924400634233945, 1.0186801734470297, 
+  -0.025177060124453615, 0.7792930539390712, 1.5361886414553247, 1.1092395969692457, 
+  0.08611417199542569, 0.9619508027474939, 1.4316393255357867, 1.0283443833084536, 
+  0.4446351179435012, 0.8993441218990603, 0.38847355909899156, 1.7693947475908474};
 
 // The only topic specific to the 'grasp' controller is the envelop torque.
 const std::string ENVELOP_TORQUE_TOPIC = "allegroHand/envelop_torque";
@@ -123,6 +128,9 @@ void AllegroNodeGrasp::libCmdCallback(const std_msgs::String::ConstPtr &msg) {
     pBHand->SetMotionType(eMotionType_JOINT_PD);
   } else if (lib_cmd.compare("three") == 0) {
     pBHand->SetJointDesiredPosition(three);
+    pBHand->SetMotionType(eMotionType_JOINT_PD);
+  } else if (lib_cmd.compare("start") == 0) {
+    pBHand->SetJointDesiredPosition(start);
     pBHand->SetMotionType(eMotionType_JOINT_PD);
   } else if (lib_cmd.compare("pdControl") == 0) {
     // Desired position only necessary if in PD Control mode

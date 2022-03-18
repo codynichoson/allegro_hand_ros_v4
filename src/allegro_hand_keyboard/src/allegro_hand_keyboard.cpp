@@ -215,6 +215,11 @@ void AHKeyboard::keyLoop()
         ss << "horns";
         dirty = true;
         break;
+      case KEYCODE_0:
+        ROS_DEBUG("0_key: Start.");
+        ss << "start";
+        dirty = true;
+        break;
       case KEYCODE_slash:
       case KEYCORD_question:
         printUsage();
